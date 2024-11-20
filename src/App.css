@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-link {
+  margin-right: 15px;
+  text-decoration: none;
+  color: blue;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

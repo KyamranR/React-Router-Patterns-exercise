@@ -5,7 +5,11 @@ function Nav({ dogs }) {
   return (
     <nav>
       {dogs.map((dog) => (
-        <NavLink key={dog.name} to={`/dogs/${dog.name.toLowerCase()}`}>
+        <NavLink
+          key={dog.name}
+          to={`/dogs/${dog.name.toLowerCase()}`}
+          className="nav-link"
+        >
           {dog.name}
         </NavLink>
       ))}
