@@ -8,7 +8,9 @@ function DogList({ dogs }) {
       <ul>
         {dogs.map((dog) => (
           <li key={dog.name}>
-            <Link to={`/dogs/${dog.name.toLowerCase()}`}>{dog.name}</Link>
+            <Link to={`/dogs/${dog.name.toLowerCase()}`} className="nav-link">
+              {dog.name}
+            </Link>
           </li>
         ))}
       </ul>
