@@ -1,17 +1,29 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav({ dogs }) {
   return (
-    <nav>
+    <nav className="nav-link">
+      <Link to="/dogs" className="nav-link">
+        Dogs
+      </Link>
+
+      <Link to="/colors" className="nav-link">
+        Colors
+      </Link>
+
+      <Link to="/colors/new" className="nav-link">
+        Add a Color
+      </Link>
+
       {dogs.map((dog) => (
-        <NavLink
+        <Link
           key={dog.name}
           to={`/dogs/${dog.name.toLowerCase()}`}
           className="nav-link"
         >
           {dog.name}
-        </NavLink>
+        </Link>
       ))}
     </nav>
   );
